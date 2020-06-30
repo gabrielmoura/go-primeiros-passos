@@ -1,0 +1,25 @@
+package main
+
+import (
+	"fmt"
+	"github.com/majestrate/i2p-tools/sam3"
+)
+
+const yoursam = "127.0.0.1:7656" // sam bridge
+
+func main() {
+	sam, _ := sam3.NewSAM(yoursam)
+	//	kkk :="2t~x6psjJvBMdBdopKEYchirNiArxIYQBdh2jHZfRru~P5It0UbZ5K-vPLfEtcFfZOctGD-5sNiJ2laLLl373aoubCg85cKvqOMQZawfv2qxeJCzbwvvMCv-JWvxFPT0DkUixW5ELZCIM6ZdOcszw-3tlL8UkACWRQ8KGUmLl~nwWjZpoMIPbJ-ulWdHe3qr8g0Y0gD~5S-qBLDPwFCorTbWSczYnecOl-6wxdv7om9q3jidkKoiZ040vxUWOIMKpVhNPM5W8SOb~E7xtZLXEiBKnPc1gKkZrjdIHFwIKyNGGnu5tfL9KvwN8N0nzW9-stjt7os2MGp2Cu2MN76W8Dzp1pVZf4kCf2vqDt4DCaUsdRn8wE2Ystk0Ir3rBUYkoVjkC58ZelGX8c4nLRnCsnIiqhDi-xMjrl7YYGfZMebvmR8OvpvbUMtUf2pl5IiJcUcOLz~BCOvKfueeDEbhTFr1Om72LOdA8C84TN77xU-xw4n0yAz4mzzZaSk5MU2xAAAA3BtyXxcvZ8wLo8e7aGHmTiIBGNZdRawz6bDLOkNvdLmr5Nx7k1KvSJX8qaybm70eAS77sVAh1tmqF2uLsoxQ4VRNgCSkhtNnY6mjH9eOh77l7LC8vJzQ66qZnDQr3IUYDzIk3E1fJheTfvMg8GleF3lLbvDZE0Y2ZZu9bCFFzB79~byPG4g8A3tkNMPmPs3hoPPKIKM5OagXtmKcXrc14ANLO17RN9FP84Y1KG-j4xj6ssDPPD3SbXzmmyTDhF5XTTbd6qvo5lpNleEz966fz1KKmqjCwdAk1gqjvrpAYjnEufI9fFKsb9GQwVFs9Ma5oFk9QLuOVLXLgSXkzge9g3mNTyOBb4oQPN7rS15Vnxfm0gAW"
+	key := [2]string{"IpZoI5s~6KDQIEh5LxQ3lKa3--cvduBND-oti8FrV5pFrJsJZkhaoa9iI1xSVTgDaUrlo~wu3n3JCyfoKjEmrc8KKmoH6N7XlS18sCqQDWG-hsMC9m9scD6qfKA~pkI7Zha4opeEISzvpxOlCQw3yqslXAztAfIoWo5oEMFgxVaDblWjV-IrNF2UZFVttVVRR2osEhg-b4hk5Gfcc~XWtQd~pYoNkRdKCGK6tqQ8AoPiXPYsAM28ig-ZNMBbUEHE3oDJxXzBhbNFmNBxwSe7zy6Y3uxWPPdI2zNmqQZMSXSvK1WAJrxU0qvl3PUyDztDB6teAt-uo6DNJ2N5xwKVUAoq2Bopcgqi4zSFWLWjc6tc6IrCKde2h~KtSAn30oUBeqYj6xLbq4JceG-7451ZWQr3Ld2YvHKFWb79YN9UDHFq2mHQflXpI5T1RoQFG2yU7h6dA6HMOz8mEfNKyuHSVmDlRk3zs39aW6CAOvbs3AB4mpOEZK-~XIgPyEjFlMxEAAAA",
+		"IpZoI5s~6KDQIEh5LxQ3lKa3--cvduBND-oti8FrV5pFrJsJZkhaoa9iI1xSVTgDaUrlo~wu3n3JCyfoKjEmrc8KKmoH6N7XlS18sCqQDWG-hsMC9m9scD6qfKA~pkI7Zha4opeEISzvpxOlCQw3yqslXAztAfIoWo5oEMFgxVaDblWjV-IrNF2UZFVttVVRR2osEhg-b4hk5Gfcc~XWtQd~pYoNkRdKCGK6tqQ8AoPiXPYsAM28ig-ZNMBbUEHE3oDJxXzBhbNFmNBxwSe7zy6Y3uxWPPdI2zNmqQZMSXSvK1WAJrxU0qvl3PUyDztDB6teAt-uo6DNJ2N5xwKVUAoq2Bopcgqi4zSFWLWjc6tc6IrCKde2h~KtSAn30oUBeqYj6xLbq4JceG-7451ZWQr3Ld2YvHKFWb79YN9UDHFq2mHQflXpI5T1RoQFG2yU7h6dA6HMOz8mEfNKyuHSVmDlRk3zs39aW6CAOvbs3AB4mpOEZK-~XIgPyEjFlMxEAAAAXuEA8Cwa6lt~9FbuJmUdsAzVcCUOyQ7OG2Te4pS1lTGFlQBf4yjVbbnRIabkeXy1Zv-WeR3xDX~ijay1J~4ecnmESK00rx03~kzV~sQcZexDYmN011RtxJQPzn8bWqiOBzcA9vvLOJZpJ7dxesfh6eM4etk19q8HjczR95YrD3uus39EnQHKcOL~9Y4dJVFXJcMcMpJ-I4n5AJnC1XpmtOexpHQqFQWlUGooY3DMJ0Lx-TJMLTmeuwGxXCcKVP6aXeZhANOP1uPkLRKPekrRjHRAUuqsHB52no1uO9chrvx4n88YH9b79Z1msZfzBD766aYjixz8DunZR27sNvHwMA~iyR3sTzfN6BLO59l3iLzWJ~Og"}
+	keys,_ := sam3.LoadKeysIncompat(key)
+	//keys := sam.ReadKeys(akey)
+	fmt.Println(keys)
+	stream, _ := sam.NewStreamSession("serverTun", keys, sam3.Options_Medium)
+	listener, _ := stream.Listen()
+	conn, _ := listener.Accept()
+	buf := make([]byte, 4096)
+	n, _ := conn.Read(buf)
+	fmt.Println(string(keys.String()))
+	fmt.Println("Server received: " + string(buf[:n]))
+}
